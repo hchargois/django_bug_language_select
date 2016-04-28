@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<p>This page is in: {{ cur_lang }}</p>
+		<form action="{% url 'set_language' %}" method="POST">Set language en{% csrf_token %}<input name="language" type="hidden" value="en"><input type="submit"></form>
+		<form action="{% url 'set_language' %}" method="POST">Set language fr{% csrf_token %}<input name="language" type="hidden" value="fr"><input type="submit"></form>
+	</body>
+</html>
